@@ -11,6 +11,7 @@
     "@vite/vitejs": "^2.3.17",
     "axios": "^0.26.0",
     "vue": "^3.2.25",
+    "vue-material-design-icons": "^5.0.0",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {

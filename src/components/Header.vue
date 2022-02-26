@@ -10,20 +10,16 @@
     </div>
 
     <div id="name">
-        Luke_
+        Luc de Wit
 
         <div id="sub-name">
-            A developer passionate about learning
+            Software developer passionate about learning
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    mounted() {
-        console.log(this.routes)
-    },
-
     computed: {
         routes() {
             return this.$router.getRoutes()
