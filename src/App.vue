@@ -30,4 +30,21 @@ body {
 hr {
   border-top: 1px solid #555;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  margin: 10px 0px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: rgb(114, 163, 172);
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background: rgb(131, 176, 184);
+}
 </style>

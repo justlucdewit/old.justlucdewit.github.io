@@ -133,17 +133,4 @@ export default {
   border: none;
   color: white;
 }
-
-#contact-send {
-  margin: 10px 0px;
-  padding: 10px 20px;
-  font-weight: bold;
-  background: rgb(114, 163, 172);
-  border: none;
-}
-
-#contact-send:hover {
-  cursor: pointer;
-  background: rgb(131, 176, 184);
-}
 </style>
