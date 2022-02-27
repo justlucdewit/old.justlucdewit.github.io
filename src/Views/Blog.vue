@@ -17,14 +17,42 @@ export default {
     blogs: []
   }),
 
+  // justlucdewit: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
+  // 
+
   async mounted() {
-    const getBlogsEndpoint = "https://api.github.com/repos/justlucdewit/justlucdewit.github.io/git/trees/f1189318b7aa6a2e64a6ea5043608c86423317ce";
+    // Auth token (with only read public permissions)
+    const authTok = "anVzdGx1Y2Rld2l0OmdocF9qdDJaOXVoQ055cnpVcWY4ZWhveENxZVNla09xdG8xcE9lZFQ=";
+    
+    const getBlogsEndpoint = "https://api.github.com/repos/justlucdewit/justlucdewit.github.io/git/trees/master";
 
     // Get list of all blog names
-    const blogs = (await axios.get(getBlogsEndpoint)).data;
-    this.blogs = blogs.tree.map(blob => blob.path);
+    let res = (await axios.get(getBlogsEndpoint, {
+      headers: {
+        Authorization: `Basic ${authTok}`
+      }
+    })).data;
 
-    
+    const srcFolderEndpoint = res.tree.find(x => x.path === "src").url;
+
+    res = (await axios.get(srcFolderEndpoint, {
+      headers: {
+        Authorization: `Basic ${authTok}`
+      }
+    })).data;
+
+    this.blogs = res;
+
+    const blogsFolderEndpoint = res.tree.find(x => x.path === "blog").url;
+
+    res = (await axios.get(blogsFolderEndpoint, {
+      headers: {
+        Authorization: `Basic ${authTok}`
+      }
+    })).data;
+
+    this.blogs = res.tree.map(x => x.path);
+
   }
 }
 </script>
