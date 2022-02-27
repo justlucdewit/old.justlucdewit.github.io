@@ -44,7 +44,6 @@ a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    width: 60px;
     text-align: center;
 }
 
@@ -77,5 +76,15 @@ a:hover {
 #sub-name {
   color: #666;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #name {
+        font-size: 20px;
+    }
+
+    #sub-name {
+        font-size: 14px;
+    }
 }
 </style>
