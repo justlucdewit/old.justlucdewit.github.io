@@ -68,7 +68,7 @@ export default {
       const webhookUrl = "https://discord.com/api/webhooks/947211293968961566/4VhJIgbIGASt7veWWdscfV0LGCE59xv-Zw_xadKLUhwjPae3rLUSvShp4YLe800HwnmX";
       
       await axios.post(webhookUrl, {
-        content: this.form.message,
+        content: '<@332071218066751490> ' + this.form.message,
         username: `${this.form.name} (${this.form.contactInfo})`
       });
 

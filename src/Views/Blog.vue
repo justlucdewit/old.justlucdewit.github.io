@@ -33,14 +33,10 @@ export default {
   // 
 
   async mounted() {
-    // Auth token (with only read public permissions)
-    const authTok = "anVzdGx1Y2Rld2l0OmdocF9qdDJaOXVoQ055cnpVcWY4ZWhveENxZVNla09xdG8xcE9lZFQ=";
-    
     const blogEndpoint = "https://raw.githubusercontent.com/justlucdewit/justlucdewit.github.io/master/src/blog/";
 
     // Get list of all blog names
     const blogPostNames = (await axios.get(blogEndpoint + "posts.json")).data;
-    
 
     const that = this;
     for (const blogPostName of blogPostNames) {
