@@ -76,4 +76,8 @@ export default {
   color: #777;
   margin-bottom: 20px;
 }
+
+.blog-content > p {
+  margin-bottom: 10px;
+}
 </style>
